@@ -199,4 +199,42 @@
             </div>
         </div>
     </section>
+    <section class="home-blog">
+        <div class="container">
+            <div class="home-blog-header">
+            <h1>Our Latest Blog About Tour</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="home-single-blog">
+                        <img src="{{asset('front/assets/img/01.png')}}" alt="" title="" class="img-fluid">
+                        <h1>Tongariro Alpine Crossing</h1>
+                        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam iste iusto, minima, consectetur ipsa asperiores eum illum odit, dolor reiciendis similique sint! Suscipit aliquid eum odit quisquam quaerat fuga perspiciatis?</h5>
+                        <a href=""><p>Read more....</p></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="home-single-blog">
+                        <img src="{{asset('front/assets/img/02.png')}}" alt="" title="" class="img-fluid">
+                        <h1>Milford Sound Cruise</h1>
+                        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam iste iusto, minima, consectetur ipsa asperiores eum illum odit, dolor reiciendis similique sint! Suscipit aliquid eum odit quisquam quaerat fuga perspiciatis?</h5>
+                        <a href=""><p>Read more....</p></a>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="home-single-blog">
+                        <img src="{{asset('front/assets/img/03.png')}}" alt="" title="" class="img-fluid">
+                        <h1>Arival in Auckland</h1>
+                        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam iste iusto, minima, consectetur ipsa asperiores eum illum odit, dolor reiciendis similique sint! Suscipit aliquid eum odit quisquam quaerat fuga perspiciatis?</h5>
+                        <a href=""><p>Read more....</p></a>
+                    </div>
+
+                </div>
+                <div class="home-blog-btn">
+                    <button type="button" class="btn btn-primary btn-lg">More Blog</button>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection

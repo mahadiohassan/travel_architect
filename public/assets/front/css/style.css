@@ -85,7 +85,49 @@
 .footer-gradiant{
     background: linear-gradient(180deg, #3C7BFF 0%, #09358E 100%) !important;
 }
+/*==========my css Home Blog===========*/
+.home-blog-header h1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #0050f7;
+    margin: 100px 0px 50px;
+    letter-spacing: 1px;
+}
+.home-blog .col-md-4 {
+    padding: 20px;
+}
+.home-single-blog h1 {
+    font-size: 26px;
+    font-family: sans-serif;
+    margin: 13px 5px;
+    color: #0050f7;
+}
+.home-single-blog h5 {
+    font-size: 15px;
+    text-align: justify;
+    font-family: sans-serif;
+}
+.home-single-blog a {
+    text-decoration: none;
+}
+.home-single-blog p {
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #0050f7;
+}
+.home-blog-btn {
+    text-align: center;
+    margin: 8px 0px 50px;
+}
+
+.home-blog-btn button.btn.btn-primary.btn-lg {
+    padding: 10px 55px;
+    font-size: 30px;
+    font-weight: 700;
+}
 /*==========my css Footer===========*/
+
 .card.bg-warning.p-2.my-5 {
     border-radius: 20px;
 }
