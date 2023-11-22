@@ -1,6 +1,7 @@
 @extends('website.master')
 
 @section('body')
+
     <section class="">
         <div class="container py-5">
 
@@ -17,7 +18,6 @@
                         </div>
                 
                 
-
                     
                 </div>
             </div>
@@ -199,6 +199,147 @@
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="demo">
+        <h1>Our Client's Thought</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="testimonial-slider" class="owl-carousel">
+                        <div class="testimonial">
+                            
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vehicula nibh. Duis eu interdum dolor. Pellentesque mollis nisl vitae.
+                            </p>
+                            <div class="testimonial-content">
+                                <div class="pic">
+                                    <img src="{{asset('front/img/client2.jpg')}}" alt="">
+                                </div>
+                                <div class="content">
+                                    <h4 class="name">-Williamson</h4>
+                                    <span class="post">Web Developer</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+     
+                        <div class="testimonial">
+                           
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vehicula nibh. Duis eu interdum dolor. Pellentesque mollis nisl vitae.
+                            </p>
+                            <div class="testimonial-content">
+                                <div class="pic">
+                                    <img src="{{asset('front/img/client3.jpg')}}" alt="">
+                                </div>
+                                <div class="content">
+                                    <h4 class="name">-kristiana</h4>
+                                    <span class="post">Web Designer</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                           
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vehicula nibh. Duis eu interdum dolor. Pellentesque mollis nisl vitae.
+                            </p>
+                            <div class="testimonial-content">
+                                <div class="pic">
+                                    <img src="{{asset('front/img/client4.jpg')}}" alt="">
+                                </div>
+                                <div class="content">
+                                    <h4 class="name">-kristiana</h4>
+                                    <span class="post">Web Designer</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                           
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vehicula nibh. Duis eu interdum dolor. Pellentesque mollis nisl vitae.
+                            </p>
+                            <div class="testimonial-content">
+                                <div class="pic">
+                                    <img src="{{asset('front/img/client5.jpg')}}" alt="">
+                                </div>
+                                <div class="content">
+                                    <h4 class="name">-kristiana</h4>
+                                    <span class="post">Web Designer</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="home-blog">
         <div class="container">
             <div class="home-blog-header">
