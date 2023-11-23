@@ -199,6 +199,151 @@ input:focus {outline: none;}
 
 
 
+
+
+ /*==========my css Home vieo-slider ===========*/
+ .home-video-slider-top h1 {
+    text-align: center;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #1444a7;
+    margin: 150px 0px 50px;
+    text-transform: capitalize;
+}
+
+ .post-slide{
+    background: #fff;
+    padding-bottom: 20px;
+    margin: 0 15px;
+}
+.post-slide .post-img{
+    position:relative;
+}
+.post-slide .over-layer{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity:0;
+    cursor: pointer;
+    transition: all 0.30s ease 0s;
+}
+.post-slide:hover .over-layer{
+    opacity:1;
+}
+.post-slide .over-layer:after{
+    content: "+";
+    font-size: 52px;
+    color: #fff;
+    position: absolute;
+    top: 31%;
+    left:42%;
+}
+.post-slide .post-img img{
+    width: 100%;
+    height: auto;
+}
+.post-slide .post-title{
+    margin:25px 0 15px 0;
+}
+.post-slide .post-title:before{
+    content:"";
+    border:2px solid #e67e22;
+    width:18%;
+    display: block;
+    margin-bottom:15px;
+}
+.post-slide .post-title a{
+    font-size: 20px;
+    font-weight:bold;
+    color:#333;
+    display: inline-block;
+    text-transform:capitalize;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+.post-slide .post-title a:hover{
+    text-decoration: none;
+    color:#e67e22;
+}
+.post-slide .post-date{
+    text-transform:capitalize;
+}
+.post-slide .post-date:before{
+    content: "\f073";
+    font-family: "Font Awesome 5 Free"; font-weight: 900;
+    margin-right: 7px;
+    color:#e67e22;
+}
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span{
+    background: #e67e22;
+}
+
+video.img-fluid.pb-2.h-100 {
+    border-radius: 25px;
+}
+
+ /*==========my css Home populer toure ===========*/
+ .home-pakeg-header h1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #13419f;
+    margin: 150px 0px 50px;
+}
+ .single-home-pakeg {
+    box-shadow: 0px 0px 20px 0px #abaaaa;
+    border-radius: 20px;
+    padding-bottom: 25px;
+}
+
+.single-home-pakeg img.img-fluid {
+    padding: 10px;
+    height: 330px;
+}
+.single-home-pakeg h3 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #1444a7;
+    font-size: 22px;
+}
+.single-home-pakeg ul {
+    display: flex;
+    text-align: center;
+}
+.single-home-pakeg ul li {
+    display: block;
+    padding: 0px 7px;
+}
+
+.single-home-pakeg ul li i{
+    font-size: 20px;
+    color: #1444a7;
+}
+.single-home-pakeg ul li span {
+    margin-left: 2px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #1444a7;
+}
+.single-home-pakeg button.btn.btn-primary {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px 20px;
+}
+.home-pakeg-all {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 150px;
+}
+.home-pakeg-all button.btn.btn-outline-primary {
+    padding: 8px 50px;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
  /*==========my css Home client tyestimonial===========*/
  .demo h1 {
     text-align: center;

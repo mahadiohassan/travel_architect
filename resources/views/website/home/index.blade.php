@@ -9,7 +9,7 @@
             <div class="card px-5 py-4 footer-gradiant mb-5">
                 <div class="row">
                         <div class="col-md-6 py-5">
-                            <h1 class="amaazing fw-bolder text-uppercase text-white ">Amazing places to enjoy your Travel</h1>
+                            <h1 class="amaazing fw-bolder text-uppercase text-white ">Amazing places to <br>enjoy your Travel</h1>
                             <p class="text-white ">Picture yourself wandering through ancient cobblestone streets, surrounded by historical architecture that whispers tales of centuries past. Feel the exhilaration of standing atop majestic mountains, breathing in the crisp, invigorating air as you take in panoramic views that stretch beyond imagination.</p>
                             <a href="{{ route('website.places') }}" class="btn btn-lg btn-outline-warning border-3 fw-bold  mt-2 px-4 me-5">Explore More</a>
                         </div>
@@ -71,7 +71,7 @@
                                     @endforeach
                                 </div>
                             </div>
-                            @php $i++; @endphp
+                            @php $i++; @endphp☻
                             @endforeach
                         </div>
                     </div>
@@ -202,34 +202,98 @@
 
 
 
+<section class="home-video-slider">
+    <div class="container">
+        <div class="home-video-slider-top">
+            <h1>Beautiful Places of the world</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="news-slider" class="owl-carousel">
+                    @foreach ($places as $place)
+                    <div class="post-slide">
+                        <div class="post-img">
+                            <video autoplay muted class="img-fluid pb-2 h-100" preload="metadata" src="{{asset($place->place_image)}}" alt="">
+                        </div>
+                        <h3 class="post-title">
+                            <a href="#">{{$place->place_name}}</a>
+                        </h3>
+                        
+                    </div>
+                    @endforeach
+     
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
 
 
+    <section class="home-pakeg">
+        <div class="container">
+            <div class="home-pakeg-header">
+                <h1>Most populer tour for you</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="single-home-pakeg">
+                        <img src="{{asset('front/img/card1.png')}}" alt="" title="" class="img-fluid">
+                        <h3>Bhutan</h3>
+                        <ul>
+                            <li><i class="fa-regular fa-clock"></i><span>3Days</span></li>
+                            <li><i class="fa-solid fa-person"></i><span>2Person</span></li>
+                            <li><i class="fa-solid fa-bangladeshi-taka-sign"></i><span>500</span></li>
+                        </ul>
+                        <button type="button" class="btn btn-primary">Book Now</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="single-home-pakeg">
+                        <img src="{{asset('front/img/card2.png')}}" alt="" title="" class="img-fluid">
+                        <h3>Malaysia</h3>
+                        <ul>
+                            <li><i class="fa-regular fa-clock"></i><span>3Days</span></li>
+                            <li><i class="fa-solid fa-person"></i><span>2Person</span></li>
+                            <li><i class="fa-solid fa-bangladeshi-taka-sign"></i><span>500</span></li>
+                        </ul>
+                        <button type="button" class="btn btn-primary">Book Now</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="single-home-pakeg">
+                        <img src="{{asset('front/img/card3.png')}}" alt="" title="" class="img-fluid">
+                        <h3>Vietnam</h3>
+                        <ul>
+                            <li><i class="fa-regular fa-clock"></i><span>3Days</span></li>
+                            <li><i class="fa-solid fa-person"></i><span>2Person</span></li>
+                            <li><i class="fa-solid fa-bangladeshi-taka-sign"></i><span>500</span></li>
+                        </ul>
+                        <button type="button" class="btn btn-primary">Book Now</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="single-home-pakeg">
+                        <img src="{{asset('front/img/card2.png')}}" alt="" title="" class="img-fluid">
+                        <h3>Bangladesh</h3>
+                        <ul>
+                            <li><i class="fa-regular fa-clock"></i><span>3Days</span></li>
+                            <li><i class="fa-solid fa-person"></i><span>2Person</span></li>
+                            <li><i class="fa-solid fa-bangladeshi-taka-sign"></i><span>500</span></li>
+                        </ul>
+                        <button type="button" class="btn btn-primary">Book Now</button>
+                    </div>
+                </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </div>
+            <div class="home-pakeg-all">
+                <button type="button" class="btn btn-outline-primary">View All</button>
+            </div>
+        </div>
+    </section>
 
 
     <div class="demo">
@@ -311,33 +375,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <section class="home-blog">

@@ -103,7 +103,7 @@
                                     <div class="col-sm-6 col-md-2">
                                         {{-- <label>From</label> --}}
                                         <select onchange="enableRooms(this)" class="form-control select2" placeholder="ok">
-                                        <option>ROOMS</option> 
+                                        <option>ADULTS</option> 
                                         <option>01</option> 
                                         <option>02</option> 
                                         <option>03</option> 
@@ -114,20 +114,10 @@
                                         <option>08</option> 
                                         <option>09</option> 
                                         <option>10</option> 
-                                        <option>11</option> 
-                                        <option>12</option> 
-                                        <option>13</option> 
-                                        <option>14</option> 
-                                        <option>15</option> 
-                                        <option>16</option> 
-                                        <option>17</option> 
-                                        <option>18</option> 
-                                        <option>19</option> 
-                                        <option>20</option>
                                         <option value="others" >OTHERS</option>
                                        
                                         </select>
-                                        <input type="number" class="form-control d-none" id="inpuut_rooms" placeholder="ROOMS">
+                                        <input type="number" class="form-control d-none" id="inpuut_rooms" placeholder="ADULTS">
                                         
                                         <script type="text/javascript">
                                             function enableRooms(answer){
@@ -143,7 +133,7 @@
                                     <div class="col-sm-6 col-md-2">
                                         {{-- <label>From</label> --}}
                                         <select onchange="enableinput(this)" class="form-control select2" placeholder="ok">
-                                        <option>GUESTS</option> 
+                                        <option>CHILD</option> 
                                         <option>01</option> 
                                         <option>02</option> 
                                         <option>03</option> 
@@ -154,18 +144,9 @@
                                         <option>08</option> 
                                         <option>09</option> 
                                         <option>10</option> 
-                                        <option>11</option> 
-                                        <option>12</option> 
-                                        <option>13</option> 
-                                        <option>14</option> 
-                                        <option>15</option> 
-                                        <option>16</option> 
-                                        <option>17</option> 
-                                        <option>18</option> 
-                                        <option>19</option> 
-                                        <option>20</option>
                                         <option value="others" >OTHERS</option>
-                                        <input type="number" class="form-control d-none" id="inpuut_fild" placeholder="GUESTS NO">
+                                        <input type="number" class="form-control d-none" id="inpuut_fild" placeholder="CHILD">
+                                        
                                         </select>
                                     </div>
 
