@@ -1,9 +1,16 @@
-.header-one{
-    background: url("../img/header.jpg");
+.header-one video{
+object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+    /* background: url("../img/tour.mp4");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    color: black;
+    color: black; */
 }
 
 .card-img-top {

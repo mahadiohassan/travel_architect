@@ -1,6 +1,10 @@
 <header class="header-one py-2">
     <nav>
-        <div class="container">
+        
+        <div class="container video">
+            <video autoplay>
+                <source src="{{asset('assets/front/img/tour.mp4')}}" type="video/webm">
+              </video>
             <div class="row hidden">
                 <div class="col-12 navbar nav navbar-expand-lg mt-4">
                     <a href="{{route('home')}}" class="m-0 p-0 nav-link navbar-brand"><img class="img-fluid mx-0 w-50 h-auto" src="{{asset('/')}}assets/front/img/whitelogo.png" alt=""></a>
