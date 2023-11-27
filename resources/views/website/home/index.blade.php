@@ -23,73 +23,12 @@
             </div>
 
             <!--amazing places to enjoy section End here-->
-
-            <!--beautiful world places section Start here-->
-            <div class="row ">
-                
-                <div class="col-md-6">
-                    <h1 class="amaazing fw-bolder text-uppercase">Beautiful places of the world</h1>
-                </div>
-             
-            </div>
-            <!--beautiful world places section End here-->
         </div>
     </section>
 
-    <!--country pictures section Start here-->
-    <section class="">
-        <div class="container">
-            <div class="row  justify-content-center">
-                <div class="text-end">
-                    <a class="btn btn-warning mb-3 mr-1" href="#carouselExampleIndicators3" role="button" data-slide="prev">
-                        <i class="fa fa-arrow-left"></i>
-                    </a>
-                    <a class="btn btn-warning mb-3 " href="#carouselExampleIndicators3" role="button" data-slide="next">
-                        <i class="fa fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="col-12">
-                    <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
-    
-                        <div class="carousel-inner">
-                            @php $i = 0; @endphp
-                            @foreach ($places->chunk(3) as $chunkPlace)
-                            <div class="carousel-item {{ $i == 0 ? 'active' : '' }}">
-                                <div class="row">
-                                    @foreach ($chunkPlace as $place)
-                                    <div class="col-md-4 mb-3">
-                                        <div class="card border-0">
-                                            <a class="nav-link " href="">
-                                                <video autoplay muted class="img-fluid pb-2 h-100" preload="metadata" src="{{asset($place->place_image)}}" alt="">
-                                                {{-- <video muted class="img-fluid pb-2 h-100" preload="metadata" src="{{asset($place->place_image)}}" alt=""> --}}
-                                            </a>
-                                        </div>
-                                        <div class="card-footer border-0 mt-3">
-                                            <h5 class="card1 fw-bold text-center card-title ">{{$place->place_name}}</h5>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                            @php $i++; @endphp☻
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="">
-        <div class="container-fluid">
-            <div class="row ">
-                <div class="col-12">
-                    <img class="img-fluid" src="{{asset('/')}}assets/front/img/dotbox.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    
+
+   {{--  
     <section class="">
         <div class="container">
             <div class="row ">
@@ -136,69 +75,13 @@
                             @endforeach
                         </div>
                     </div>
-                </div>
+                </div> 
        
                
             </div>
         </div>
     </section>
-    <section class="mt-5">
-        <div class="container mt-3">
-            <div class="row ">
-                <h1 class="amaazing fw-bolder text-uppercase text-center text-uppercase mb-5">See What Our Client Says</h1>
-            </div>
-            <div class="row  justify-content-center">
-                  
-                <div class="text-end">
-                    <a class="btn btn-warning mb-3 mr-1" href="#carouselExampleIndicators5" role="button" data-slide="prev">
-                        <i class="fa fa-arrow-left"></i>
-                    </a>
-                    <a class="btn btn-warning mb-3 " href="#carouselExampleIndicators5" role="button" data-slide="next">
-                        <i class="fa fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="col-12">
-                    <div id="carouselExampleIndicators5" class="carousel slide" data-ride="carousel">
-    
-                        <div class="carousel-inner">
-                            @php $i = 0; @endphp
-                            @foreach ($reviews->chunk(2) as $chunk)
-                            <div class="carousel-item {{ $i == 0 ? 'active' : '' }}">
-                                <div class="row">
-                                    @foreach ($chunk as $review)
-                                        <div class="col-md-6 mb-3">
-                                            <div class="card border-0 shadow d-flex justify-content-center align-items-center ">
-                                                <img class="rounded-circle" style="width: 150px;" alt="100%x280" src="{{asset($review->client_image)}}" >
-                                                <div class="card-body">
-                                                    <i class="fa-solid fa-quote-left"></i>
-                                                    <p class="card-text mx-4 fst-italic fw-light ">{{ $review->client_description }}</p>
-                                                    <h4 class="card-title text-end fw-bold fs-5 me-5">- {{ $review->client_name }}</h4>
-                                                    <p class="text-end me-5">
-                                                        @for($i = 1; $i <= 5; $i++)
-                                                        @if($review->client_rating >= $i)
-                                                            <i class="fa-solid fa-star text-orange"></i>
-                                                        @else
-                                                            <i class="fa-regular fa-star text-orange"></i>
-                                                        @endif
-                                                       @endfor 
-                                                    </p>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                            @php $i++; @endphp
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-       
-               
-            </div>
-        </div>
-    </section>
+--}}
 
 
 
@@ -239,55 +122,21 @@
                 <h1>Most populer tour for you</h1>
             </div>
             <div class="row">
+                @foreach($tours as $tour)
                 <div class="col-md-3">
                     <div class="single-home-pakeg">
-                        <img src="{{asset('front/img/card1.png')}}" alt="" title="" class="img-fluid">
-                        <h3>Bhutan</h3>
+                        <img src="{{asset($tour->package_image)}}" alt="" title="" class="img-fluid">
+                        <h3>{{ $tour->tour_title }}</h3>
                         <ul>
-                            <li><i class="fa-regular fa-clock"></i><span>3Days</span></li>
-                            <li><i class="fa-solid fa-person"></i><span>2Person</span></li>
-                            <li><i class="fa-solid fa-bangladeshi-taka-sign"></i><span>500</span></li>
+                            <li><i class="fa-regular fa-clock"></i><span>3 Days</span></li>
+                            <li><i class="fa-solid fa-person"></i><span>2 Person</span></li>
+                            <li><i class="fa-solid fa-bangladeshi-taka-sign"></i><span>{{$tour->lowest_price}}</span></li>
                         </ul>
-                        <button type="button" class="btn btn-primary">Book Now</button>
+                        
+                        <a href="{{route('package-detail', ['id' => $tour->id])}}" class=""><button type="button" class="btn btn-primary">Book Now</button></a>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="single-home-pakeg">
-                        <img src="{{asset('front/img/card2.png')}}" alt="" title="" class="img-fluid">
-                        <h3>Malaysia</h3>
-                        <ul>
-                            <li><i class="fa-regular fa-clock"></i><span>3Days</span></li>
-                            <li><i class="fa-solid fa-person"></i><span>2Person</span></li>
-                            <li><i class="fa-solid fa-bangladeshi-taka-sign"></i><span>500</span></li>
-                        </ul>
-                        <button type="button" class="btn btn-primary">Book Now</button>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="single-home-pakeg">
-                        <img src="{{asset('front/img/card3.png')}}" alt="" title="" class="img-fluid">
-                        <h3>Vietnam</h3>
-                        <ul>
-                            <li><i class="fa-regular fa-clock"></i><span>3Days</span></li>
-                            <li><i class="fa-solid fa-person"></i><span>2Person</span></li>
-                            <li><i class="fa-solid fa-bangladeshi-taka-sign"></i><span>500</span></li>
-                        </ul>
-                        <button type="button" class="btn btn-primary">Book Now</button>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="single-home-pakeg">
-                        <img src="{{asset('front/img/card2.png')}}" alt="" title="" class="img-fluid">
-                        <h3>Bangladesh</h3>
-                        <ul>
-                            <li><i class="fa-regular fa-clock"></i><span>3Days</span></li>
-                            <li><i class="fa-solid fa-person"></i><span>2Person</span></li>
-                            <li><i class="fa-solid fa-bangladeshi-taka-sign"></i><span>500</span></li>
-                        </ul>
-                        <button type="button" class="btn btn-primary">Book Now</button>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
             <div class="home-pakeg-all">
                 <button type="button" class="btn btn-outline-primary">View All</button>
@@ -302,74 +151,24 @@
             <div class="row">
                 <div class="col-md-12">
                     <div id="testimonial-slider" class="owl-carousel">
+                        @foreach ($reviews as $chunk)
                         <div class="testimonial">
-                            
+                           
                             <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vehicula nibh. Duis eu interdum dolor. Pellentesque mollis nisl vitae.
+                                {{ $chunk->client_description }}
                             </p>
                             <div class="testimonial-content">
                                 <div class="pic">
                                     <img src="{{asset('front/img/client2.jpg')}}" alt="">
                                 </div>
                                 <div class="content">
-                                    <h4 class="name">-Williamson</h4>
+                                    <h4 class="name">{{ $chunk->client_name }}</h4>
                                     <span class="post">Web Developer</span>
                                     
                                 </div>
                             </div>
                         </div>
-     
-                        <div class="testimonial">
-                           
-                            <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vehicula nibh. Duis eu interdum dolor. Pellentesque mollis nisl vitae.
-                            </p>
-                            <div class="testimonial-content">
-                                <div class="pic">
-                                    <img src="{{asset('front/img/client3.jpg')}}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h4 class="name">-kristiana</h4>
-                                    <span class="post">Web Designer</span>
-                                    
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial">
-                           
-                            <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vehicula nibh. Duis eu interdum dolor. Pellentesque mollis nisl vitae.
-                            </p>
-                            <div class="testimonial-content">
-                                <div class="pic">
-                                    <img src="{{asset('front/img/client4.jpg')}}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h4 class="name">-kristiana</h4>
-                                    <span class="post">Web Designer</span>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial">
-                           
-                            <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vehicula nibh. Duis eu interdum dolor. Pellentesque mollis nisl vitae.
-                            </p>
-                            <div class="testimonial-content">
-                                <div class="pic">
-                                    <img src="{{asset('front/img/client5.jpg')}}" alt="">
-                                </div>
-                                <div class="content">
-                                    <h4 class="name">-kristiana</h4>
-                                    <span class="post">Web Designer</span>
-                                    
-                                </div>
-                            </div>
-                        </div>
-
-                        
+                        @endforeach                   
                     </div>
                 </div>
             </div>

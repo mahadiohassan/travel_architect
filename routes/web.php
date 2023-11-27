@@ -25,6 +25,15 @@ Route::get('/home/package', [HomeController::class, 'packages'])->name('website.
 Route::get('/home/place', [HomeController::class, 'places'])->name('website.places');
 Route::get('/package-search', [HomeController::class, 'packageSearch'])->name('website.package.search');
 Route::get('/contact-us', [HomeController::class, 'contact'])->name('contact');
+
+
+Route::get('blog', [HomeController::class, 'blog'])->name('blog');
+Route::get('blog-details', [HomeController::class, 'blogDetails'])->name('blog-details');
+
+
+
+
+
 Route::post('/book-now/{id}', [BookingController::class, 'index'])->name('book-now');
 Route::get('/user/login', [CustomerAuthController::class, 'index'])->name('customer.login');
 Route::post('/user/login', [CustomerAuthController::class, 'login'])->name('customer.login');
@@ -34,6 +43,10 @@ Route::get('/complete-order', [BookingController::class, 'completeOrder'])->name
 Route::get('/customer/dashboard', [CustomerAuthController::class, 'dashboard'])->name('customer.dashboard');
 
 Route::get('/booking-invoice/{id}', [AdminBookingController::class, 'invoice'])->name('booking-invoice');
+
+
+
+
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
 
@@ -47,7 +60,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::get('/package/detail/{id}', [PackageController::class, 'detail'])->name('package.detail');
     Route::post('/package/update/{id}', [PackageController::class, 'packageUpdate'])->name('package.update');
     Route::get('/package/delete/{id}', [PackageController::class, 'packageDelete'])->name('package.delete');
-
+    
     Route::get('/admin/order', [OrderController::class, 'index'])->name('order');
     Route::get('/admin/order/status/{id}',[OrderController::class,'statusOrder'])->name('order.status');
     Route::post('/admin/order/update/{id}', [OrderController::class, 'orderUpdate'])->name('order.update');
@@ -91,6 +104,18 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::get('/faq/edit/{id}', [FaqController::class, 'edit'])->name('faq.edit');
     Route::post('/faq/update/{id}', [FaqController::class, 'faqUpdate'])->name('faq.update');
     Route::get('/faq/delete/{id}', [FaqController::class, 'faqDelete'])->name('faq.delete');
+
+    Route::get('blog-add',[FaqController::class,'blogAdd'])->name('blog-add');
+    Route::post('upload_image', [FaqController::class, 'uploadImage'])->name('upload');
+    Route::post('save', [FaqController::class, 'store'])->name('store');
+
+    Route::get('edit-blog/{id}',[FaqController::class,'editBlog'])->name('edit-blog');
+    Route::put('update-blog/{id}',[FaqController::class,'updateBlog'])->name('update-blog');
+
+    Route::get('all-blog',[FaqController::class,'allBlog'])->name('all-blog');
+    Route::delete('delete-blog/{id}',[FaqController::class,'deleteblog'])->name('delete-blog');
+
+
 
     Route::get('/hotel', [HotelController::class, 'index'])->name('hotel');
     Route::get('/hotel/create', [HotelController::class, 'create'])->name('hotel.create');

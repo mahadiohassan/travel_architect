@@ -1,11 +1,17 @@
-<header class="header-one py-2">
+<header class="header-one">
+    <video autoplay controls style="object-fit: cover;width: 100%;height: 100vh;">
+        <source src="{{asset('assets/front/img/tour.mp4')}}" type="video/mp4">
+      </video>
+
+    {{-- <video autoplay>
+        <source src="{{asset('assets/front/img/tour.mp4')}}" type="video/webm">
+    </video> --}}
     <nav>
         
-        <div class="container video">
-            <video autoplay>
-                <source src="{{asset('assets/front/img/tour.mp4')}}" type="video/webm">
-              </video>
+        <div class="container video searc-bar">
+           
             <div class="row hidden">
+               
                 <div class="col-12 navbar nav navbar-expand-lg mt-4">
                     <a href="{{route('home')}}" class="m-0 p-0 nav-link navbar-brand"><img class="img-fluid mx-0 w-50 h-auto" src="{{asset('/')}}assets/front/img/whitelogo.png" alt=""></a>
                     <!-- <button class="navbar-toggler btn-primary border-0" data-bs-target="#menu" data-bs-toggle="collapse">
@@ -13,9 +19,9 @@
                     </button> -->
                     <div class="collapse navbar-collapse menu fw-bolder" id="menu">
                         <ul class="ms-auto  navbar-nav navbar-brand text-uppercase">
-                            <li class="nav-item"><a href="{{ route('website.package') }}" class="nav-link fs-5 px-2 text-white menuhover"><small>Tour</small></a></li>
-                            <li class="nav-item"><a href="{{ route('website.places') }}" class="nav-link fs-5 px-2 text-white menuhover"><small>Places</small></a></li>
-                            <li class="nav-item"><a href="{{route('contact')}}" class="nav-link fs-5 px-2 fontfamily text-white menuhover"><small>Contact us</small></a></li>
+                            <li class="nav-item"><a href="{{ route('website.package') }}" class="nav-link fs-5 px-2 text-white menuhover"><small>Tour Packages</small></a></li>
+                            <li class="nav-item"><a href="{{ route('website.places') }}" class="nav-link fs-5 px-2 text-white menuhover"><small>Blog</small></a></li>
+                            <li class="nav-item"><a href="{{route('contact')}}" class="nav-link fs-5 px-2 fontfamily text-white menuhover"><small>Contact</small></a></li>
                             @if(Session::get('customer_id'))
                                 <li class="nav-item dropdown">
                                     <a href="" class="nav-link fs-5 px-2 text-white menuhover dropdown-toggle" data-bs-toggle="dropdown">{{Session::get('customer_name')}}</a>
@@ -25,7 +31,7 @@
                                     </ul>
                                 </li>
                             @else
-                                <li class="nav-item"><a href="{{route('customer.login')}}" class="nav-link fs-5 px-2 fontfamily text-white menuhover">Login</a></li>
+                                    {{-- <li class="nav-item"><a href="{{route('customer.login')}}" class="nav-link fs-5 px-2 fontfamily text-white menuhover">Login</a></li> --}}
                             @endif
                             <li class="nav-item"><a href="{{route('website.package')}}" class="btn btn-outline-primary text-white border-3 fw-bolder ms-3 px-4 me-5"><small>BOOK NOW</small></a></li>
                         </ul>
@@ -62,62 +68,48 @@
 
                             <div class="row">
                                     <div class="col-sm-12 col-md-4">
-                                        {{-- <label>From</label> --}}
-                                        <select class="form-control select2" placeholder="ok">
-                                        <option>CITY/HOTEL/RESORT/AREA</option> 
-                                        <option>Dhaka, Bangladesh</option> 
-                                        <option>Cox's Bazar, Bangladesh</option> 
-                                        <option>Jessore, Bangladesh</option> 
-                                        <option>Chhittagong, Bangladesh</option> 
-                                        <option>Saidpur, Bangladesh</option>
-                                        <option>Sylet Osmani, Bangladesh</option> 
-                                        <option>London, United Kingdom</option> 
-                                        <option>New York, United States</option> 
-                                        <option>Chhittagong, Bangladesh</option> 
+                                        <select class="form-control select2"  required>
+                                        <option value="">Location/Area</option> 
+                                        <option  value="">Dhaka, Bangladesh</option> 
+                                        <option  value="">Cox's Bazar, Bangladesh</option> 
+                                        <option  value="">Jessore, Bangladesh</option> 
+                                        <option  value="">Chhittagong, Bangladesh</option> 
+                                        <option  value="">Saidpur, Bangladesh</option>
+                                        <option  value="">Sylet Osmani, Bangladesh</option> 
+                                        <option  value="">London, United Kingdom</option> 
+                                        <option  value="">New York, United States</option> 
+                                        <option  value="">Chhittagong, Bangladesh</option> 
                                         </select>
                                     </div>
 
-                                    {{-- <div class="col-md-3">
-                                         <label>To</label> 
-                                        <select class="form-control select2">
-                                        <option>TO</option> 
-                                        <option>Sylet Osmani, Bangladesh</option> 
-                                        <option>London, United Kingdom</option> 
-                                        <option>New York, United States</option> 
-                                        <option>Chhittagong, Bangladesh</option> 
-                                        <option>Saidpur, Bangladesh</option> 
-                                        </select>
-                                    </div> --}}
-
-                                    <div class="col-sm-6 col-md-2">
+                                    <div class="col-sm-12 col-md-2">
                                         <div class="wrapper">
                                             <label for="datepicker">CHECK IN
-                                                <input type="date" id="datepicker" autocomplete="off">
+                                                <input type="date" id="datepicker" autocomplete="off" required>
                                             </label>	
                                         </div>
                                     </div>
-                                    <div class="col-sm-6 col-md-2">
+                                    <div class="col-sm-12 col-md-2">
                                         <div class="wrapper">
                                             <label for="datepicker">CHECK OUT
-                                                <input type="date" id="datepicker" autocomplete="off">
+                                                <input type="date" id="datepicker" autocomplete="off" required>
                                             </label>	
                                         </div>
                                     </div>
 
-                                    <div class="col-sm-6 col-md-2">
-                                        {{-- <label>From</label> --}}
-                                        <select onchange="enableRooms(this)" class="form-control select2" placeholder="ok">
-                                        <option>ADULTS</option> 
-                                        <option>01</option> 
-                                        <option>02</option> 
-                                        <option>03</option> 
-                                        <option>04</option> 
-                                        <option>05</option> 
-                                        <option>06</option> 
-                                        <option>07</option> 
-                                        <option>08</option> 
-                                        <option>09</option> 
-                                        <option>10</option> 
+                                    <div class="col-sm-12 col-md-2">
+                                        <select onchange="enableRooms(this)" class="form-control select2" placeholder="ok" required>
+                                        <option value="">ADULTS</option> 
+                                        <option value="">01</option> 
+                                        <option value="">02</option> 
+                                        <option value="">03</option> 
+                                        <option value="">04</option> 
+                                        <option value="">05</option> 
+                                        <option value="">06</option> 
+                                        <option value="">07</option> 
+                                        <option value="">08</option> 
+                                        <option value="">09</option> 
+                                        <option value="">10</option> 
                                         <option value="others" >OTHERS</option>
                                        
                                         </select>
@@ -134,9 +126,8 @@
                                         </script>
 
                                     </div>
-                                    <div class="col-sm-6 col-md-2">
-                                        {{-- <label>From</label> --}}
-                                        <select onchange="enableinput(this)" class="form-control select2" placeholder="ok">
+                                    <div class="col-sm-12 col-md-2">
+                                        <select onchange="enableinput(this)" class="form-control select2">
                                         <option>CHILD</option> 
                                         <option>01</option> 
                                         <option>02</option> 

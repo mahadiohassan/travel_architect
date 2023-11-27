@@ -12,9 +12,9 @@
                     </button>
                     <div class="collapse navbar-collapse me-0 menu fw-bolder" id="menu">
                         <ul class="ms-auto  navbar-nav navbar-brand text-uppercase">
-                            <li class="nav-item"><a href="{{ route('website.package') }}" class="nav-link fs-10 px-2 fontfamily text-black  menuhover"><small>tour</small></a></li>
-                            <li class="nav-item"><a href="{{ route('website.places') }}" class="nav-link fs-10 px-2 fontfamily text-black  menuhover"><small>places</small></a></li>
-                            <li class="nav-item"><a href="{{route('contact')}}" class="nav-link fs-10 px-2 fontfamily text-black menuhover"><small>contact</small> us</a></li>
+                            <li class="nav-item"><a href="{{ route('website.package') }}" class="nav-link fs-10 px-2 fontfamily text-black  menuhover"><small>tour Packages</small></a></li>
+                            <li class="nav-item"><a href="{{ route('website.places') }}" class="nav-link fs-10 px-2 fontfamily text-black  menuhover"><small>Blog</small></a></li>
+                            <li class="nav-item"><a href="{{route('contact')}}" class="nav-link fs-10 px-2 fontfamily text-black menuhover"><small>contact<small></a></li>
                             @if(Session::get('customer_id'))
                                 <li class="nav-item dropdown">
                                     <a href="" class="nav-link fs-10 px-2 fontfamily text-dark menuhover dropdown-toggle" data-bs-toggle="dropdown">{{Session::get('customer_name')}}</a>
@@ -24,7 +24,7 @@
                                     </ul>
                                 </li>
                             @else
-                                <li class="nav-item"><a href="{{route('customer.login')}}" class="nav-link fs-10 px-2 fontfamily text-dark menuhover">Login</a></li>
+                                {{-- <li class="nav-item"><a href="{{route('customer.login')}}" class="nav-link fs-10 px-2 fontfamily text-dark menuhover">Login</a></li> --}}
                             @endif
                             <li class="nav-item"><a href="{{route('website.package')}}" class="btn btn-warning text-black border fw-bolder border-black ms-3 me-0 buttonhover  menuhover"><small>BOOK NOW</small></a></li>
                         </ul>

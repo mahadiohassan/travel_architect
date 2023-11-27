@@ -78,6 +78,17 @@
                 <li class="slide">
                     <a class="side-menu__item" data-bs-toggle="slide" href="#">
                         <!--add tour icon with the class side-menu__icon-->
+                        <span class="side-menu__icon"><i class="fa fa-question"></i></span>
+                        <span class="side-menu__label">Blog Module</span><i class="angle fa fa-angle-right"></i>
+                    </a>
+                    <ul class="slide-menu">
+                       
+                        <li><a href="{{route('blog-add')}}" class="slide-item">Add-Blog</a></li>
+                    </ul>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item" data-bs-toggle="slide" href="#">
+                        <!--add tour icon with the class side-menu__icon-->
                         <span class="side-menu__icon"><i class="fa fa-location-arrow"></i></span>
                         <span class="side-menu__label">Place Module</span><i class="angle fa fa-angle-right"></i>
                     </a>

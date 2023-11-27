@@ -1,18 +1,17 @@
-.header-one video{
-object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
 
-    /* background: url("../img/tour.mp4");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    color: black; */
+.header-one nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
-
+.row.my-travel-search {
+    margin-top: 125px;
+}
+@media screen and (max-width: 500px){
+.row.my-travel-search {
+    margin-top: 25px;
+}
+}
 .card-img-top {
     width: 100%;
     height: 15vw;
@@ -125,7 +124,7 @@ object-fit: cover;
     border-bottom: 2px solid #1444a7;
 }
 div#pills-tabContent {
-    background-color: #fff;
+    background-color: #ffffff94;
     padding: 50px 10px 0px;
     margin-top: -40px;
     border-radius: 20px;
@@ -214,7 +213,7 @@ input:focus {outline: none;}
     font-weight: 600;
     font-family: sans-serif;
     color: #1444a7;
-    margin: 150px 0px 50px;
+    margin: 0px 0px 50px;
     text-transform: capitalize;
 }
 
@@ -251,21 +250,14 @@ input:focus {outline: none;}
     height: auto;
 }
 .post-slide .post-title{
-    margin:25px 0 15px 0;
+   text-align: center;
 }
-.post-slide .post-title:before{
-    content:"";
-    border:2px solid #e67e22;
-    width:18%;
-    display: block;
-    margin-bottom:15px;
-}
+
 .post-slide .post-title a{
     font-size: 20px;
-    font-weight:bold;
-    color:#333;
+    font-weight: bold;
     display: inline-block;
-    text-transform:capitalize;
+    text-transform: uppercase;
     transition: all 0.3s ease 0s;
     text-decoration: none;
 }
@@ -435,6 +427,9 @@ video.img-fluid.pb-2.h-100 {
 
 
 /*==========my css Home Blog===========*/
+.home-single-blog {
+    box-shadow: 0px 0px 20px 0px;
+}
 .home-blog-header h1 {
     text-align: center;
     font-family: sans-serif;
@@ -456,6 +451,7 @@ video.img-fluid.pb-2.h-100 {
     font-size: 15px;
     text-align: justify;
     font-family: sans-serif;
+    padding: 0px 10px;
 }
 .home-single-blog a {
     text-decoration: none;
@@ -464,6 +460,7 @@ video.img-fluid.pb-2.h-100 {
     font-weight: 600;
     font-family: sans-serif;
     color: #1444a7;
+    padding: 0px 10px;
 }
 .home-blog-btn {
     text-align: center;
@@ -507,4 +504,72 @@ p.fw-light {
 }
 .footer-img {
     border-top: 2px solid #fff;
+}
+
+/*==========
+All BLOG PAGE
+===========*/
+.all-blog-hero{
+    background-image: url('../img/header1.jpg');
+    border-radius: 25px;
+}
+.all-blog-hero h1 {
+    padding: 100px 50px;
+    font-weight: 700;
+    color: #fff;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+
+.all-blog-text .home-single-blog {
+    box-shadow: 0px 0px 20px 0px;
+    margin: 100px 30px;
+}
+.all-blog-text-details {
+    padding: 0px 35px 10px;
+}
+/*==========
+SINGLE BLOG PAGE
+===========*/
+.single-blog-details {
+    text-align: justify;
+    margin-top: 20px;
+}
+.single-blog-details h1 {
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+.single-blog-details p {
+    font-size: 16px;
+    font-family: sans-serif;
+}
+.table-comtent {
+    border: 1px solid #0b47c5;
+}
+.table-comtent p {
+    text-align: center;
+    background: #0b47c5;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px 0px;
+    font-size: 16px;
+}
+.table-comtent ul {
+    text-align: center;
+    padding: 0px;
+}
+.table-comtent ul li {
+    display: block;
+    font-size: 16px;
+    margin: 5px 0px;
+    padding: 10px 0px;
+    font-weight: 600;
+    color: #3a3a3a;
+    background: #e3e3e3;
+}
+.table-comtent ul li a{
+    font-family: sans-serif;
+    color: #3a3a3a;
+    text-decoration: none;
 }

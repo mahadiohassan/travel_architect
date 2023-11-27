@@ -54,7 +54,7 @@
 <script>
 $(document).ready(function() {
     $("#news-slider").owlCarousel({
-        items : 2,
+        items : 3,
         itemsDesktop:[1199,3],
         itemsDesktopSmall:[980,2],
         itemsMobile : [600,1],

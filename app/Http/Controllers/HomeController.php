@@ -21,7 +21,8 @@ class HomeController extends Controller
 
         return view('website.home.index', [
             'places' => Place::where('status', 1)->get(), 
-            'tours'  => Package::where('status', 1)->orderBy('id', 'desc')->get(),
+            //'tours'  => Package::where('status', 1)->orderBy('id', 'desc')->get(),
+            'tours'  => Package::where('status', 1)->orderBy('id', 'desc')->limit(4)->get(),
             'reviews'=> ClientReview::where('status', 1)->orderBy('created_at', 'desc')->get(),
         ]);
     }
@@ -119,5 +120,16 @@ class HomeController extends Controller
             ->appends(request()->all()),
             'lowestPrices' => $lowestPrices, 
             'tourTypes' => $tourtypes]);
+    }
+
+
+
+    public function blog()
+    {
+        return view('website.home.blog');
+    }
+    public function blogDetails()
+    {
+        return view('website.home.blog-details');
     }
 }
